@@ -1,0 +1,56 @@
+81.109.160.116  4           72       0       0        1    0    0 22:47:45 Active
+163.184.247.193 4        64521       0       0        1    0    0 never    Idle (Admin)
+172.24.9.1      4        65597       0       0        1    0    0 22:46:05 Idle
+184.71.54.118   4           72       0       0        1    0    0 22:47:37 Active
+
+Routing entry for 172.24.9.0/24
+  Known via "bgp 72", distance 20, metric 0
+  Tag 17974, type external
+  Redistributing via eigrp 72
+  Last update from 163.184.230.93 22:46:26 ago
+  Routing Descriptor Blocks:
+  * 163.184.230.93, from 163.184.230.93, 22:46:26 ago
+      Route metric is 0, traffic share count is 1
+      AS Hops 4
+      Route tag 17974
+      MPLS label: none
+
+ ip nhrp map 172.24.9.1 163.184.226.45
+ ip nhrp map 172.24.9.1 163.184.226.45
+
+ip route 163.184.226.45 255.255.255.255 163.184.222.190 name sg0063-singapore7-vpn-hub-cs
+
+Routing entry for 163.184.222.188/30
+  Known via "connected", distance 0, metric 0 (connected, via interface)
+  Redistributing via eigrp 72, bgp 72
+  Advertised by bgp 72
+  Routing Descriptor Blocks:
+  * directly connected, via GigabitEthernet0/0.86
+      Route metric is 0, traffic share count is 1
+
+GigabitEthernet0/0.86 is up, line protocol is up 
+  Hardware is PQ3_TSEC, address is 58f3.9cdd.d980 (bia 58f3.9cdd.d980)
+  Description: INTERCONNECT | 25M | ETHERNET | id0050-int-pa | NAP Info | CCT ID 03002540006 | ISP Contact : noc@nap.net.id / call at (62-21) 252 8888/ 252 5392
+  Internet address is 163.184.222.189/30
+  MTU 1500 bytes, BW 25000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 10/255, rxload 3/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  86.
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive set (10 sec)
+  Last clearing of "show interface" counters never
+
+Building configuration...
+
+Current configuration : 389 bytes
+!
+interface GigabitEthernet0/0.86
+ description INTERCONNECT | 25M | ETHERNET | id0050-int-pa | NAP Info | CCT ID 03002540006 | ISP Contact : noc@nap.net.id / call at (62-21) 252 8888/ 252 5392
+ bandwidth 25000
+ encapsulation dot1Q 86
+ ip address 163.184.222.189 255.255.255.252
+ no ip redirects
+ no ip proxy-arp
+ ip flow ingress
+ ip flow egress
+ service-policy input PA-Internet-Edge
+end

@@ -1,0 +1,35 @@
+
+Pinging br0115-finance-sw1.mgmt.slb.net [172.30.64.141] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 172.30.64.141:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+Tracing route to br0115-finance-sw1.mgmt.slb.net [172.30.64.141]
+over a maximum of 20 hops:
+
+  1    <1 ms    <1 ms    <1 ms  my0108-vs-core-sw1-vl27.if.slb.net [163.184.216.129] 
+  2    <1 ms    <1 ms    <1 ms  my0108-kuala-lumpur1-cs.mgmt.slb.net [128.58.217.129] 
+  3     1 ms     1 ms     1 ms  vf-my0108-kuala-lumpur1-cs.if.slb.net [163.184.229.129] 
+  4   212 ms   211 ms   211 ms  vf-us1455-houston1-dc-cs.if.slb.net [163.185.73.173] 
+  5   213 ms   214 ms   213 ms  us1455-houston1-dc-cs-gi2-2-7-100.if.slb.net [163.185.73.174] 
+  6   223 ms   213 ms   214 ms  us1455-houston2-dc-cs-te2-3-0.if.slb.net [172.26.10.10] 
+  7   214 ms   214 ms   213 ms  att-us1455-houston2-dc-cs.if.slb.net [163.185.14.242] 
+  8   338 ms   338 ms   338 ms  172.28.2.193 
+  9   341 ms   341 ms   340 ms  br0115-taubate1-cs-gi0-1-2.if.slb.net [172.28.2.194] 
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12     *        *        *     Request timed out.
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+
+Trace complete.
